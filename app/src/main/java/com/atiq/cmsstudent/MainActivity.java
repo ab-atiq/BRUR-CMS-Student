@@ -1,6 +1,7 @@
 package com.atiq.cmsstudent;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -14,6 +15,7 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.NavigationUI;
 
 
+import com.atiq.cmsstudent.ebook.EbookActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 
@@ -71,6 +73,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             case R.id.navigation_ebook:
                 Toast.makeText(this, "Ebooks", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(getApplicationContext(), EbookActivity.class));
                 break;
 
             case R.id.navigation_theme:
