@@ -15,6 +15,9 @@
         android:theme="@style/Theme.CMSStudent"
         tools:targetApi="31">
         <activity
+            android:name=".ebook.PdfViewerActivity"
+            android:exported="false" />
+        <activity
             android:name=".ebook.EbookActivity"
             android:exported="false" />
         <activity
