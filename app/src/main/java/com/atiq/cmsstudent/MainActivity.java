@@ -91,6 +91,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.navigation_chat:
                 startActivity(new Intent(getApplicationContext(), ChatActivity.class));
                 break;
+            case R.id.navigation_logout:
+                auth.signOut();
+                startActivity(new Intent(getApplicationContext(), SignInActivity.class));
+                break;
 
         }
         return true;
