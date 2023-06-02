@@ -25,7 +25,7 @@ public class VideoPlayerApp extends AppCompatActivity {
         videoSong1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                VideoPlayInApp.videoSongLink="https://www.youtube.com/embed/pd0nogrj-38";
+                VideoPlayInApp.videoSongLink="https://www.youtube.com/embed/Mz9BlmST31w";
                 videoPlay = new Intent(VideoPlayerApp.this, VideoPlayInApp.class);
                 startActivity(videoPlay);
             }
@@ -34,7 +34,7 @@ public class VideoPlayerApp extends AppCompatActivity {
         videoSong2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                VideoPlayInApp.videoSongLink="https://www.youtube.com/embed/GK2ippphNnM";
+                VideoPlayInApp.videoSongLink="https://www.youtube.com/embed/RBSGKlAvoiM";
                 videoPlay = new Intent(VideoPlayerApp.this, VideoPlayInApp.class);
                 startActivity(videoPlay);
             }
@@ -43,7 +43,7 @@ public class VideoPlayerApp extends AppCompatActivity {
         videoSong3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                VideoPlayInApp.videoSongLink="https://www.youtube.com/embed/5Zvfd_ntlG0";
+                VideoPlayInApp.videoSongLink="https://www.youtube.com/embed/_uQrJ0TkZlc";
                 videoPlay = new Intent(VideoPlayerApp.this, VideoPlayInApp.class);
                 startActivity(videoPlay);
             }
@@ -52,7 +52,7 @@ public class VideoPlayerApp extends AppCompatActivity {
         videoSong4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                VideoPlayInApp.videoSongLink="https://www.youtube.com/embed/cwASfUe9dGo";
+                VideoPlayInApp.videoSongLink="https://www.youtube.com/embed/eKqY-oP1d_Y";
                 videoPlay = new Intent(VideoPlayerApp.this, VideoPlayInApp.class);
                 startActivity(videoPlay);
             }
