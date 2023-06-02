@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
 
             case R.id.navigation_video:
-                Toast.makeText(this, "Video Lectures", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(getApplicationContext(), VideoPlayerApp.class));
                 break;
 
             case R.id.navigation_rate:
