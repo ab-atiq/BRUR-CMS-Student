@@ -17,6 +17,7 @@ import com.firebase.ui.auth.AuthUI
 import com.firebase.ui.auth.BuildConfig
 import com.firebase.ui.database.FirebaseRecyclerOptions
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.UserProfileChangeRequest
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
@@ -28,6 +29,7 @@ import com.google.firebase.storage.ktx.storage
 class ChatActivity : AppCompatActivity() {
     private lateinit var binding: ActivityChatBinding
     private lateinit var manager: LinearLayoutManager
+    private var reference: DatabaseReference? = null
 
     // Firebase instance variables
     private lateinit var auth: FirebaseAuth
@@ -186,7 +188,19 @@ class ChatActivity : AppCompatActivity() {
     private fun getUserName(): String? {
         val user = auth.currentUser
         return if (user != null) {
-            user.email
+            reference = FirebaseDatabase.getInstance().reference.child("Users")
+            val userName = reference!!.child(user.uid).child("name")
+            userName.get().addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    val name = task.result?.value.toString()
+                    user.updateProfile(
+                        UserProfileChangeRequest.Builder().setDisplayName(name).build())
+                    Log.d(TAG, "User name: $name")
+                } else {
+                    Log.d(TAG, "User name: null")
+                }
+            }
+            user.displayName
         } else ANONYMOUS
     }
 

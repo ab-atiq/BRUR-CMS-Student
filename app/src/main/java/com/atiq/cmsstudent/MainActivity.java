@@ -37,9 +37,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button button = findViewById(R.id.chatButton);
-        button.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), MessageActivity.class)));
-
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
         navController = Navigation.findNavController(this, R.id.frame_layout);
 
@@ -90,6 +87,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             case R.id.navigation_share:
                 Toast.makeText(this, "Share", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.navigation_chat:
+                startActivity(new Intent(getApplicationContext(), ChatActivity.class));
                 break;
 
         }

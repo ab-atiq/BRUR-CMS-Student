@@ -35,4 +35,9 @@
         android:icon="@drawable/ic_developer"
         />
 
+    <item android:id="@+id/navigation_chat"
+        android:title="Chat"
+        android:icon="@drawable/ic_gallery"
+        />
+
 </menu>

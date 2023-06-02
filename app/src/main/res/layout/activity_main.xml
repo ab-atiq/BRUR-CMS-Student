@@ -36,12 +36,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:menu="@menu/bottom_nav" />
 
-        <Button
-            android:id="@+id/chatButton"
-            android:text="Chat"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.navigation.NavigationView
