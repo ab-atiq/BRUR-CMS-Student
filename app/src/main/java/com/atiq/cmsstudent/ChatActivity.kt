@@ -1,5 +1,6 @@
 package com.atiq.cmsstudent
 
+import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
@@ -12,6 +13,7 @@ import com.atiq.cmsstudent.chat.MyButtonObserver
 import com.atiq.cmsstudent.chat.MyOpenDocumentContract
 import com.atiq.cmsstudent.chat.MyScrollToBottomObserver
 import com.atiq.cmsstudent.databinding.ActivityChatBinding
+import com.firebase.ui.auth.AuthUI
 import com.firebase.ui.auth.BuildConfig
 import com.firebase.ui.database.FirebaseRecyclerOptions
 import com.google.firebase.auth.FirebaseAuth
@@ -112,6 +114,16 @@ class ChatActivity : AppCompatActivity() {
         adapter.startListening()
     }
 
+    public override fun onStart() {
+        super.onStart()
+        if (auth.currentUser == null) {
+            // Not signed in, launch the Sign In activity
+            startActivity(Intent(this, SignInActivity::class.java))
+            finish()
+            return
+        }
+    }
+
     private fun onImageSelected(uri: Uri) {
         Log.d(TAG, "Uri: $uri")
         val user = auth.currentUser
@@ -133,7 +145,7 @@ class ChatActivity : AppCompatActivity() {
                             // Build a StorageReference and then upload the file
                             val key = databaseReference.key
                             val storageReference = Firebase.storage
-                                    .getReference("qwq")
+                                    .getReference(user!!.uid)
                                     .child(key!!)
                                     .child(uri.lastPathSegment!!)
                             putImageInStorage(storageReference, uri, key)
@@ -174,7 +186,7 @@ class ChatActivity : AppCompatActivity() {
     private fun getUserName(): String? {
         val user = auth.currentUser
         return if (user != null) {
-            user.displayName
+            user.email
         } else ANONYMOUS
     }
 

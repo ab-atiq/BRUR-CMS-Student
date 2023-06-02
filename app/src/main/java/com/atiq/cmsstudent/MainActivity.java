@@ -19,6 +19,7 @@ import androidx.navigation.ui.NavigationUI;
 import com.atiq.cmsstudent.ebook.EbookActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.Objects;
 
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle toggle;
     private NavigationView navigationView;
+    private FirebaseAuth auth = FirebaseAuth.getInstance();
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -36,7 +38,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setContentView(R.layout.activity_main);
 
         Button button = findViewById(R.id.chatButton);
-        button.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), ChatActivity.class)));
+        button.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), MessageActivity.class)));
 
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
         navController = Navigation.findNavController(this, R.id.frame_layout);
@@ -54,9 +56,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if (toggle.onOptionsItemSelected(item)) {
-            return true;
-        }
+        toggle.onOptionsItemSelected(item);
         return true;
     }
 
@@ -94,5 +94,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         }
         return true;
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        if (auth.getCurrentUser() == null) {
+            startActivity(new Intent(getApplicationContext(), SignInActivity.class));
+            finish();
+        }
     }
 }
