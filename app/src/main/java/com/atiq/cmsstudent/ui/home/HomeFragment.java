@@ -29,9 +29,9 @@ public class HomeFragment extends Fragment {
         imageView = view.findViewById(R.id.map);
 
         ArrayList<SlideModel> imageList = new ArrayList<>();
-        imageList.add(new SlideModel("https://www.bssnews.net/assets/news_photos/2022/04/24/image-57658-1650807255.jpg","This is description", ScaleTypes.CENTER_CROP));
-        imageList.add(new SlideModel("https://brur.ac.bd/wp-content/uploads/2021/11/BRUR-Photo-5-10.11.2021-400x200.jpg","This is description",ScaleTypes.CENTER_CROP));
-        imageList.add(new SlideModel("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzzBRszjz0NDoebCacXaMwP8dBlcDjxjhu60jr8-5OBX52NM5pIgQsH6GloVfpOWzzOZ8&usqp=CAU","This is description",ScaleTypes.CENTER_CROP));
+        imageList.add(new SlideModel("https://www.bssnews.net/assets/news_photos/2022/04/24/image-57658-1650807255.jpg","Begum Rokeya University, Rangpur", ScaleTypes.CENTER_CROP));
+        imageList.add(new SlideModel("https://brur.ac.bd/wp-content/uploads/2021/11/BRUR-Photo-5-10.11.2021-400x200.jpg","International Accounting Day Celebration",ScaleTypes.CENTER_CROP));
+        imageList.add(new SlideModel("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzzBRszjz0NDoebCacXaMwP8dBlcDjxjhu60jr8-5OBX52NM5pIgQsH6GloVfpOWzzOZ8&usqp=CAU","Meeting with all teachers",ScaleTypes.CENTER_CROP));
         imageSlider.setImageList(imageList);
 
         imageView.setOnClickListener(new View.OnClickListener() {

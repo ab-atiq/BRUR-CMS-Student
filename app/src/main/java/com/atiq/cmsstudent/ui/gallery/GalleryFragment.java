@@ -22,7 +22,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GalleryFragment extends Fragment {
-    RecyclerView convocationRecyclerView, othersRecyclerView;
+    RecyclerView convocationRecyclerView, othersRecyclerView, independentRecyclerView;
     GalleryAdapter adapter;
     DatabaseReference reference;
     @Override
@@ -31,10 +31,12 @@ public class GalleryFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_gallery, container, false);
         convocationRecyclerView = view.findViewById(R.id.convocationRecyclerView);
+        independentRecyclerView = view.findViewById(R.id.independentRecyclerView);
         othersRecyclerView = view.findViewById(R.id.othersRecyclerView);
         reference = FirebaseDatabase.getInstance().getReference().child("gallery");
 
         getConvocationImages();
+        getIndependentImages();
         getOthersImages(); 
 
         return view;
@@ -52,6 +54,27 @@ public class GalleryFragment extends Fragment {
                 adapter = new GalleryAdapter(getContext(), imageList);
                 othersRecyclerView.setLayoutManager(new GridLayoutManager(getContext(),3));
                 othersRecyclerView.setAdapter(adapter);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+    }
+
+    private void getIndependentImages() {
+        reference.child("Independent Day").addValueEventListener(new ValueEventListener() {
+            List<String> imageList = new ArrayList<>();
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for(DataSnapshot dataSnapshot: snapshot.getChildren()){
+                    String data = (String) dataSnapshot.getValue();
+                    imageList.add(data);
+                }
+                adapter = new GalleryAdapter(getContext(), imageList);
+                independentRecyclerView.setLayoutManager(new GridLayoutManager(getContext(),3));
+                independentRecyclerView.setAdapter(adapter);
             }
 
             @Override

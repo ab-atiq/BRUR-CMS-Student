@@ -26,7 +26,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="The GPA Table"
+                android:text="Important Information"
                 android:layout_marginTop="30dp"
                 android:textSize="@dimen/title_size"
                 android:layout_gravity="center_horizontal"
@@ -120,6 +120,182 @@
                                 android:layout_margin="8dp"
                                 android:fontFamily="@string/regular"
                                 />
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/grey"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Mathematics"
+                                android:layout_marginTop="@dimen/text_margin"
+                                android:textSize="@dimen/text_margin"
+                                android:layout_gravity="center_horizontal"
+                                android:textColor="@color/textColor"
+                                android:layout_margin="8dp"
+                                android:fontFamily="@string/regular"
+                                />
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/grey"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Chemistry"
+                                android:layout_marginTop="@dimen/text_margin"
+                                android:textSize="@dimen/text_margin"
+                                android:layout_gravity="center_horizontal"
+                                android:textColor="@color/textColor"
+                                android:layout_margin="8dp"
+                                android:fontFamily="@string/regular"
+                                />
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/grey"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Statistics"
+                                android:layout_marginTop="@dimen/text_margin"
+                                android:textSize="@dimen/text_margin"
+                                android:layout_gravity="center_horizontal"
+                                android:textColor="@color/textColor"
+                                android:layout_margin="8dp"
+                                android:fontFamily="@string/regular"
+                                />
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/grey"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Accounting"
+                                android:layout_marginTop="@dimen/text_margin"
+                                android:textSize="@dimen/text_margin"
+                                android:layout_gravity="center_horizontal"
+                                android:textColor="@color/textColor"
+                                android:layout_margin="8dp"
+                                android:fontFamily="@string/regular"
+                                />
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/grey"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Management"
+                                android:layout_marginTop="@dimen/text_margin"
+                                android:textSize="@dimen/text_margin"
+                                android:layout_gravity="center_horizontal"
+                                android:textColor="@color/textColor"
+                                android:layout_margin="8dp"
+                                android:fontFamily="@string/regular"
+                                />
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/grey"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Bangla"
+                                android:layout_marginTop="@dimen/text_margin"
+                                android:textSize="@dimen/text_margin"
+                                android:layout_gravity="center_horizontal"
+                                android:textColor="@color/textColor"
+                                android:layout_margin="8dp"
+                                android:fontFamily="@string/regular"
+                                />
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/grey"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="English"
+                                android:layout_marginTop="@dimen/text_margin"
+                                android:textSize="@dimen/text_margin"
+                                android:layout_gravity="center_horizontal"
+                                android:textColor="@color/textColor"
+                                android:layout_margin="8dp"
+                                android:fontFamily="@string/regular"
+                                />
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/grey"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Disaster management"
+                                android:layout_marginTop="@dimen/text_margin"
+                                android:textSize="@dimen/text_margin"
+                                android:layout_gravity="center_horizontal"
+                                android:textColor="@color/textColor"
+                                android:layout_margin="8dp"
+                                android:fontFamily="@string/regular"
+                                />
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/grey"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="History and Archaeology"
+                                android:layout_marginTop="@dimen/text_margin"
+                                android:textSize="@dimen/text_margin"
+                                android:layout_gravity="center_horizontal"
+                                android:textColor="@color/textColor"
+                                android:layout_margin="8dp"
+                                android:fontFamily="@string/regular"
+                                />
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/grey"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Economics"
+                                android:layout_marginTop="@dimen/text_margin"
+                                android:textSize="@dimen/text_margin"
+                                android:layout_gravity="center_horizontal"
+                                android:textColor="@color/textColor"
+                                android:layout_margin="8dp"
+                                android:fontFamily="@string/regular"
+                                />
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/grey"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Sociology"
+                                android:layout_marginTop="@dimen/text_margin"
+                                android:textSize="@dimen/text_margin"
+                                android:layout_gravity="center_horizontal"
+                                android:textColor="@color/textColor"
+                                android:layout_margin="8dp"
+                                android:fontFamily="@string/regular"
+                                />
                         </LinearLayout>
                     </com.google.android.material.card.MaterialCardView>
                 </LinearLayout>
@@ -135,39 +311,12 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="The GPA Table"
+                    android:text="Visit BRUR in google map"
                     android:layout_marginTop="30dp"
                     android:textSize="@dimen/title_size"
                     android:layout_gravity="center_horizontal"
                     android:textColor="@color/textColor"
                     android:fontFamily="@string/bold"
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/app_name"
-                    android:layout_marginTop="30dp"
-                    android:textSize="@dimen/title_size"
-                    android:textColor="@color/textColor"
-                    android:fontFamily="@string/regular"
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Begum Rokeya University, Rangpur"
-                    android:layout_marginTop="30dp"
-                    android:textSize="@dimen/title_size"
-                    android:textColor="@color/textColor"
-                    android:fontFamily="@string/regular"
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="abul------@gmail.com"
-                    android:layout_marginTop="30dp"
-                    android:textSize="@dimen/title_size"
-                    android:textColor="@color/textColor"
-                    android:fontFamily="@string/regular"
                     />
 
                 <ImageView
@@ -177,6 +326,15 @@
                     android:src="@drawable/brur_map"
                     />
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Begum Rokeya University, Rangpur"
+                    android:layout_marginTop="30dp"
+                    android:textSize="@dimen/title_size"
+                    android:textColor="@color/textColor"
+                    android:fontFamily="@string/regular"
+                    />
             </LinearLayout>
 
         </LinearLayout>
