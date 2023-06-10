@@ -15,6 +15,22 @@
         android:theme="@style/Theme.CMSStudent"
         tools:targetApi="31">
         <activity
+            android:name=".LoginActivityFirebase"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".SignUpActivityFirebase"
+            android:exported="false" />
+        <activity
             android:name=".VideoPlayInApp"
             android:exported="false" />
         <activity
@@ -34,16 +50,7 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
+            android:exported="false">
         </activity>
     </application>
 

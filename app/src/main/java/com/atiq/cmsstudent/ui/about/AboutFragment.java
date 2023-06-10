@@ -27,8 +27,8 @@ public class AboutFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_about, container, false);
         list = new ArrayList<>();
-        list.add(new BranchModel(R.drawable.baseline_computer, "Computer Science", "This is description, This is description, This is description, This is description, This is description, This is description, "));
-        list.add(new BranchModel(R.drawable.baseline_eee, "Electrical Engineering", "This is description, This is description, This is description, This is description, This is description, This is description, "));
+        list.add(new BranchModel(R.drawable.baseline_computer, "Computer Science", "Fundamental areas of computer science Computer science is the study of computation, information, and automation. Computer science spans theoretical disciplines to applied disciplines. Though more often considered an academic discipline, computer science is closely related to computer programming."));
+        list.add(new BranchModel(R.drawable.baseline_eee, "Electrical Engineering", "Electrical engineering is an engineering discipline concerned with the study, design, and application of equipment, devices, and systems which use electricity, electronics, and electromagnetism."));
 
         adapter = new BranchAdapter(getContext(), list);
         viewPager = view.findViewById(R.id.viewPager);
